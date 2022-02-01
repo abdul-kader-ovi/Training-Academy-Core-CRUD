@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Training>
+
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<h1>Trainings</h1>
+<div class="container-fluid alert-dark">
+    <p> @Html.ActionLink("Create new Training", "CreateTraining", "Training")</p>
+    <table class="table table border alert-info">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.TrainingId)</th>
+                <th>@Html.DisplayNameFor(model => model.TrainingName)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TrainingId</td>
+                    <td>@item.TrainingName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
